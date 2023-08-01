@@ -126,7 +126,7 @@ RUN echo "CHROMIUM_FLAGS='--no-sandbox --start-maximized --user-data-dir'" > $HO
     echo LANG=en_US.UTF-8 > /etc/default/locale && \
     locale-gen en_US.UTF-8
 
-USER 1000
+USER root
 
 ENTRYPOINT ["/dockerstartup/desktop_startup.sh"]
 CMD ["--wait"]
